@@ -1,0 +1,1 @@
+web: java -jar target/ben-test-app-1.0.jar

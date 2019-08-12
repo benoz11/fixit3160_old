@@ -1,0 +1,36 @@
+<!-- 
+ * FixIT - Project for University of Newcastle - 2019 - SENG3150 SENG3160
+ * Benjamin McDonnell, Jordan Maddock, Matthew Rudge, Kundayi Sitole
+ *
+ * Project: FixIT-Spring
+ * File:    test.html
+ * 
+ * Description: test page
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>fsFixIT - Login</title>
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	</head>
+
+    <body>
+        <div class="centre-text"> <h1>TESTTESTTTESTESTSETSETSETSETESEST</h1> </div>
+		<img class="logo" src="resources/img/logo.png" alt="FixIT" />
+		<h3>Users</h3>
+		<table>
+			<th>username</th>
+			<th>name</th>
+			<th>role</th>
+			<th>created</th>
+			<th:block th:each="user : ${users}">
+			<tr>
+				<td th:text="${user.username}"></td>
+				<td th:text="${user.name}"></td>
+				<td th:text="${user.role}"></td>
+				<td th:text="${user.created}"></td>
+			</tr>
+			</th:block>
+		</table>
+	
+    </body>
+</html>
