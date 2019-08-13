@@ -1,5 +1,5 @@
 # fixit3160
-Spring implementation of our FixIT3150 project
+### Spring implementation of our FixIT3150 project
 
 Initially clone with `https://github.com/benoz11/fixit3160.git`
 
