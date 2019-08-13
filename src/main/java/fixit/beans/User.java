@@ -12,18 +12,50 @@
  */
 package fixit.beans;
 
-public class User implements java.io.Serializable{
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "Users")
+public class User implements Serializable{
 	/*
 	*	DB stores the user in this order
 	*/
+	@Column(name = "username")
+	@Basic(optional = false)
 	String username;
+	
+	@Column(name = "tole")
+	@Basic(optional = false)
 	String role;
+	
+	@Column(name = "password")
+	@Basic(optional = false)
 	String password;
+	
+	@Column(name = "name")
+	@Basic(optional = false)
 	String name;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	int id;
+	
+	@Column(name = "created")
+	@Basic(optional = true)
 	String created;
 	
 	public User() {}
+	
+	public User(String username, String role, String password, String name, int id, String created) {
+		this.username = username;
+		this.role = role;
+		this.password = password;
+		this.name = name;
+		this.id = id;
+		this.created = created;
+	}
 	
 	private static final long serialVersionUID = 1L;
 	

@@ -18,13 +18,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 import fixit.db.*;
 
-	@RestController
-	public class GeneralController {
-		@GetMapping("/test")
-		public ModelAndView test() {
-			ModelAndView mav = new ModelAndView("test");
-			Dao dao = new Dao();
-			mav.addObject("users", dao.getUsers());
-			return mav;
+@RestController
+public class GeneralController {
+
+	@GetMapping("/")
+	public ModelAndView test() {
+		ModelAndView mav = new ModelAndView("test");
+		Dao dao = new Dao();
+		mav.addObject("users", dao.getUsers());
+		return mav;
 	}
+
 }

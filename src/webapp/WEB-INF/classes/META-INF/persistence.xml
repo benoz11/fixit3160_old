@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="testPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-54-243-238-226.compute-1.amazonaws.com:5432/dalob4q95vnv38"/>
+            <property name="javax.persistence.jdbc.user" value="qbjosxuxuthptx"/>
+            <property name="javax.persistence.jdbc.password" value="9662c9f1a2bc9fb187804b81b9f513c7fcec066d7b9a8e9f47cdb96cb69f8f13"/>
+        </properties>
+    </persistence-unit>
+</persistence>

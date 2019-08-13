@@ -14,11 +14,13 @@ package fixit.db;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import fixit.beans.User;
+import fixit.beans.*;
 import fixit.rowmaps.UserMapper;    
 
 public class Dao {
@@ -30,8 +32,12 @@ public class Dao {
 	
 	private DriverManagerDataSource dmds;
 	private JdbcTemplate jdbcTemplateObject;
+	private static EntityManager em = null;
+	
+	public static void setUpClass() throws Exception {
+		
+	}
 
-	@Bean
 	public DriverManagerDataSource getDS() {
 		DriverManagerDataSource dmds = new DriverManagerDataSource();
 		dmds.setDriverClassName(DB_DRIVER);
