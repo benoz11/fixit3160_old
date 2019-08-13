@@ -22,7 +22,7 @@ To run locally, open bash/cmd to the fixit3160 folder and type `java -jar target
 View local deployment at [localhost:8080](http://localhost:8080)
 
 
-When you have made changes and thoroughly tested them locally, stage those changes with `git add .`
+When you have made changes, compiled them with `mvn package`, and thoroughly tested them locally, stage those changes with `git add .`
 
 
 Commit the changes with `git commit -m "A meaningful message"`
