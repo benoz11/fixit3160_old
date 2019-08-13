@@ -10,7 +10,7 @@ Set a git repo variable with `git remote add fixit3160 https://github.com/benoz1
 Always pull the most up to date version before making changes with `git pull fixit3160 master`
 
 
-To run locally, open bash/cmd to the fixit3160 folder and type `java -jar target/fixit3160-1.0.jar` for local deployment
+To run locally, open bash/cmd to the fixit3160 folder and type `java -jar target/fixit3160-1.0.jar`
 
 
 View local deployment at [localhost:8080](http://localhost:8080)
@@ -19,7 +19,7 @@ View local deployment at [localhost:8080](http://localhost:8080)
 When you have made changes and thoroughly tested them locally, stage those changes with `git add .`
 
 
-Commit the changes with `git commit -m "A meaningful message`
+Commit the changes with `git commit -m "A meaningful message"`
 
 
 push the changes with `git push fixit3160 master`
