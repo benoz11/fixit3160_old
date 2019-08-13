@@ -1,1 +1,1 @@
-web: java -jar target/ben-test-app-1.0.jar
+web: java -jar target/fixit3160-1.0.jar

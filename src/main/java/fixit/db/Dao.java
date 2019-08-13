@@ -12,10 +12,7 @@
  */
 package fixit.db;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,7 +22,6 @@ import fixit.beans.User;
 import fixit.rowmaps.UserMapper;    
 
 public class Dao {
- //sample project doesn't yet have a db attached - Try clone the other one or just make a sample one for now
 	
 	private static String DB_DRIVER = "org.postgresql.Driver";
 	private static String DB_USER = "qbjosxuxuthptx";
