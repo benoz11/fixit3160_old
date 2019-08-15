@@ -1,6 +1,8 @@
 # fixit3160
 ### Spring implementation of our FixIT3150 project
 
+Project live on heroku at https://fixit3160.herokuapp.com
+
 Initially clone with `https://github.com/benoz11/fixit3160.git`
 
 
