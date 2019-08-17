@@ -12,39 +12,21 @@
  */
 package fixit.beans;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name = "Users")
 public class User implements Serializable{
 	/*
 	*	DB stores the user in this order
 	*/
-	@Column(name = "username")
-	@Basic(optional = false)
+
 	String username;
-	
-	@Column(name = "tole")
-	@Basic(optional = false)
 	String role;
-	
-	@Column(name = "password")
-	@Basic(optional = false)
 	String password;
-	
-	@Column(name = "name")
-	@Basic(optional = false)
 	String name;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
 	int id;
-	
-	@Column(name = "created")
-	@Basic(optional = true)
 	String created;
+	
+	private static final long serialVersionUID = 1L;
 	
 	public User() {}
 	
@@ -56,8 +38,6 @@ public class User implements Serializable{
 		this.id = id;
 		this.created = created;
 	}
-	
-	private static final long serialVersionUID = 1L;
 	
 	public String getUsername() {return username;}
 	public String getRole() {return role;}

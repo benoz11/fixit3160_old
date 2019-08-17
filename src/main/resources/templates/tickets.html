@@ -1,0 +1,50 @@
+<!-- 
+ * FixIT - Project for University of Newcastle - 2019 - SENG3150 SENG3160
+ * Benjamin McDonnell, Jordan Maddock, Matthew Rudge, Kundayi Sitole
+ *
+ * Project: FixIT-Spring
+ * File:    test.html
+ * 
+ * Description: test page
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>FixIT - Login</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!--link rel="stylesheet" type="text/css" href="resources/css/style.css"-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+
+    <body>
+    	<div class="navbar navbar-expand-md navbar-dark"> 		
+			<a href="/"><img class="navbar-brand" src="/img/logo.png" alt="FixIT" /></a>
+			<div class="navbar-collapse collapse" id="collapsingNavbar">
+				<ul class="navbar-nav">
+					<h3 class="nav-item">Tickets</h3>
+				</ul>
+			</div>
+		</div>
+		<table class="table table-striped" data-link="row">
+			<thead class="thead-dark">
+				<th>Name</th>
+				<th>State</th>
+				<th>Posted By</th>
+				<th>Assigned To</th>
+				<th>Created</th>
+			</thead>
+			<tbody>
+				<th:block th:each="ticket : ${tickets}">
+					
+						<tr>
+							<td><a href="#" th:href="@{/tickets/{id}(id=${ticket.id})}" th:text="${ticket.name}"></a></td>
+							<td th:text="${ticket.state}"></td>
+							<td th:text="${ticket.posterid}"></td>
+							<td th:text="${ticket.caseworkerid}"></td>
+							<td th:text="${ticket.created}"></td>
+						</tr>
+				</th:block>
+			</tbody>
+		</table>
+	
+    </body>
+</html>

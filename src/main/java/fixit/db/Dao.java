@@ -21,6 +21,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import fixit.beans.*;
+import fixit.rowmaps.TicketMapper;
 import fixit.rowmaps.UserMapper;    
 
 public class Dao {
@@ -51,6 +52,18 @@ public class Dao {
 		dmds = getDS();
 		jdbcTemplateObject = new JdbcTemplate(dmds);
 		return jdbcTemplateObject.query("SELECT * FROM public.\"Users\"", new UserMapper());
+	}
+	
+	public List<Ticket> getTickets() {
+		dmds = getDS();
+		jdbcTemplateObject = new JdbcTemplate(dmds);
+		return jdbcTemplateObject.query("SELECT * FROM public.\"Tickets\"", new TicketMapper());
+	}
+	
+	public Ticket getTicket(int id) {
+		dmds = getDS();
+		jdbcTemplateObject = new JdbcTemplate(dmds);
+		return jdbcTemplateObject.queryForObject("SELECT * FROM public.\"Tickets\" WHERE id=" + id + ";", new TicketMapper());
 	}
 
 }
